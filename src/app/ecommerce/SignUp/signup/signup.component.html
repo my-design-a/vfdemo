@@ -1,0 +1,95 @@
+<h3 style="text-align: center;background-color: aqua;">REGISTER</h3>
+<div class="container-fluid">
+  <div class="login-box">
+<form [formGroup]="form" (submit)="onSubmit()">
+       <div class="form-group"> 
+      <label><strong>Full Name</strong><span style="color: red;">*</span></label>
+      <input type="text"  class="form-control" placeholder="మీ పూర్తి పేరు తెలియజేయండి"  formControlName="full_name">
+       <!-- <span class="error" *ngIf="full_name?.invalid && full_name?.touched">Enter Proper Name</span>-->
+
+       <div *ngIf="form.get('full_name').invalid && (form.get('full_name').dirty || form.get('full_name').touched)"
+       class="alert alert-danger">
+   
+     <div *ngIf="form.get('full_name').errors.required">
+       Name is required.
+     </div>
+     <div *ngIf="form.get('full_name').errors.minlength">
+       Name must be at least 4 characters long.
+     </div>
+     <div *ngIf="form.get('full_name').errors.maxlength">
+       Name must be at most 100 characters long.
+     </div>
+     <div *ngIf="form.get('full_name').errors.forbiddenName">
+       Name cannot be Bob.
+       </div>
+      </div>
+
+      </div>
+
+
+      <div class="form-group"> 
+      <label><strong>Mobile Number</strong><span style="color: red;">*</span></label>
+      <input type="text" class="form-control" placeholder="మీ మొబైల్ నెంబర్ తెలియజేయండి"  formControlName="mobile_number" >
+
+
+      <div *ngIf="form.get('mobile_number').invalid && (form.get('mobile_number').dirty || form.get('mobile_number').touched)"
+      class="alert alert-danger">
+  
+    <div *ngIf="form.get('mobile_number').errors.required">
+      Mobile Number is required.
+    </div>
+    <div *ngIf="form.get('mobile_number').errors.minlength">
+      Mobile Number must be at least 5 characters long.
+    </div>
+    <div *ngIf="form.get('mobile_number').errors.maxlength">
+      Mobile Number must be at most 100 characters long.
+    </div>
+    <div *ngIf="form.get('mobile_number').errors.forbiddenName">
+      Mobile Number cannot be Bob.
+      </div>
+     </div>
+      </div>
+    
+      <label> <strong>Alternate Mobile Number</strong></label>
+      <input type="text"  class="form-control" placeholder="అదనపు మొబైల్ నెంబర్ తెలియజేయండి" formControlName="altmobilenumber" >
+    
+      <label>
+        <strong>HouseNo</strong><span style="color: red;">*</span></label>
+      <input type="text" class="form-control" placeholder="మీ ఇంటి నెంబర్ తెలియజేయండి" formControlName="houseno">
+    
+
+    
+       <label><strong>RoadName,Area,Colony</strong> <span style="color: red;">*</span></label>
+       <input type="text" class="form-control" placeholder="కాలనీ పేరు,రోడ్ నెంబర్ తెలియజేయండి"  formControlName="roadname">
+   
+
+    
+       <!--  -->
+      <label><strong>Village<span style="color: red;">*</span></strong></label>
+      <select class="form-control" formControlName="village"  name="village" (change)="selected()" [(ngModel)]='villageCode'>
+        <option [ngValue]="GMP" disabled>---Select Village (క్రింద వాటిలో మీ ఊరిని ఎంచుకోండి)---</option> 
+        <option *ngFor="let v of villages" [ngValue]="v.code" >{{v.name}}</option>
+      </select>
+  
+    
+      <label><strong>PinCode</strong><span style="color: red;">*</span></label>
+      <input type="text" class="form-control" placeholder="మీ పిన్ కోడ్ తెలియజేయండి"  formControlName="pincode" [(ngModel)]='pinC' readonly>
+    
+      
+        <label><strong>State</strong></label>
+        <input type="text" class="form-control"  readonly formControlName="state">
+   
+        <label><strong>Country</strong></label>
+        <input type="text" class="form-control"  readonly formControlName="country">
+     
+      <strong style="color:green;"><span style="color: red;font-size: larger;">*</span> మార్క్ ఉన్నవి మొత్తం నింపండి</strong><br>
+      
+       <!-- <div  style="background-color: aqua;" type="submit" class="btn">Register</div>  -->
+       <button type="submit" class="btn"  [disabled]="!form.valid" style="background-color: aqua;">Submit</button>
+       
+  </form>
+</div>
+</div>
+
+
+

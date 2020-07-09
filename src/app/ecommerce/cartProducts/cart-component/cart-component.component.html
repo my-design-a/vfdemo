@@ -1,0 +1,74 @@
+
+
+
+
+
+<div class="container-fluid" > 
+
+  <p style="text-align: center;font-weight: bolder;">Welcome To Cart</p>
+  
+    <div class="row justify-content-center" style="border:2px solid #cecece;margin-bottom: 0.25em;background-color: burlywood;border-radius: 1rem;font-family: sans-serif;"> 
+      <div class="col-xs-6 text-center mt-2 mb-2 align-self-center">
+         <span>Total Rs <strong>{{(totalCartValue).toFixed(0)}}</strong></span> <br>
+         <span>You Saved Rs {{(totalDiscountValue-totalCartValue).toFixed(0)}}</span>
+      </div>
+      <div class="col-xs-6 text-center mt-2 align-self-center ml-5">
+        <div class="btn btn-primary" (click)="checkOut()" routerLink="/app-login">CheckOut</div>
+     </div>
+  </div>
+
+ 
+  <div class="row" *ngFor="let p of cartData;" style="border:2px solid #cecece;margin-bottom: 0.25em;border-radius: 1em;"> 
+    
+     <div class="col-xs-4 mt-1 mr-2 mb-1 pl-3" >
+       <img src="{{p.productImageUrl}}" width="100" height="100" >
+      </div>
+     <div class="col-xs-6">
+      <div class="d-inline-flex mt-2">
+        <p style="font-weight: bolder;font-family: sans-serif;">{{p.productName}}</p>
+        <p style="padding-left: 1em;font-weight: bolder;font-family: sans-serif;">{{p.productEName}}</p>
+      </div>
+      
+      <br>
+      
+      <span style="padding: 4px;font-weight: bold;margin-right: 1em;font-family: sans-serif;background-color: cornflowerblue;border-radius: 10px;" >{{p.selWeight}}</span>
+      
+     
+      <del style="font-family: sans-serif;">Rs {{p.Orgprice}}</del>
+     <!-- <span style="color:black;text-decoration:line-through;font-family: sans-serif;">Rs {{p.Orgprice}}</span>  -->
+      <span style="padding-left: 5px;font-weight: bold;font-family: sans-serif;">Rs {{p.DisPrice}}</span><br>
+      
+
+    <!--Quantity Button start-->
+
+          <div class="d-inline-flex mt-2">
+            <a (click)="removeValues(p)" ><i class="fa fa-times-circle" aria-hidden="true" style="margin-right: 5em;"></i></a>
+            <a (click)="decrementValue(p)" ><i class="fa fa-minus-circle " aria-hidden="true" style="margin-left: 2em;"></i></a>
+            <strong style="padding-left: 8px;padding-right:8px ;">{{p.quantity}}</strong>
+            <a (click)="incrementValue(p)" ><i class="fa fa-plus-circle " aria-hidden="true"></i></a>
+          </div>
+    <!--QUANTITY Button End-->
+  
+   
+    </div>
+
+   
+  </div> 
+
+  
+  
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

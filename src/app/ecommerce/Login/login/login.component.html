@@ -1,0 +1,41 @@
+
+<!--
+<div class="card  pl-3 pr-5 mb-2" style="background-color: lightskyblue;float: none; margin: 0 auto;">
+<form>
+    <div class="form-group">
+      <label for="inputPhoneOrMail">Phone Number or Email address</label>
+      <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter PhoneNumber Or Email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2 ml-5">Login</button>
+</form>
+</div>-->
+
+
+<div class="container-fluid">
+  <h4 style="text-align: center;margin-top: 1em;">Login</h4>
+  <div class="row " style="background-color: cornsilk;border-radius: 5px;">
+    
+    <div class="col text-center">
+      <form (submit)="loginUserData(user)">
+        <div class="form-group" >
+          <label for="inputPhoneOrMail">Phone Number or Email address</label>
+          <input type="text" class="form-control"  name="phonenumber" placeholder="Enter PhoneNumber Or Email" [(ngModel)]="user.userPhoneNumber">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="user.password">
+        </div>
+
+        <!--<div class="btn btn-primary" >Login</div>-->
+        <button type="submit" class="btn btn-primary ">Login</button>
+     </form>
+     
+    </div>
+    
+  </div>
+</div>
+

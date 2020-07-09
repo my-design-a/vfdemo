@@ -1,0 +1,127 @@
+
+<div class="container-fluid">
+  <strong>Your Address</strong><br>
+  <small>(మీ యొక్క ప్రస్తుత  అడ్రస్)</small>
+
+<div class="card pl-2 mr-4 mb-2" >
+
+<strong>Aravind</strong>
+<p><span>Phone Number: </span>7093094220</p>
+<p><span>5-77/1</span>,<span>wardNo 5</span></p>
+<p>Gambhirpur <span>505306</span></p>
+<p>Telangana</p>
+<p>India</p>
+</div>
+
+<div (click)="onClickAddNewAddress()" class="btn btn-secondary text-white mb-2" data-target=".bd-example-modal-md"  data-toggle="modal">
+<strong>Edit Address</strong><br>
+<small>(మీ యొక్క ప్రస్తుత అడ్రస్ ని మార్పు చేయండి)</small></div>
+
+<div class="modal fade bd-example-modal-md mt-2 " tabindex="-1" role="dialog" aria-labelledby="editAddress" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md ">
+    <div class="modal-content p-2">
+         <strong>Edit Address</strong>
+        <!--<a (click)="doubleClick()" class="box"><i class="fa fa-times-circle" ></i></a>-->
+          <form (submit)="onClickEditAddress()">
+            <div class="d-inline-flex mb-2">
+            <input type= "text" placeholder="FirstName" class="form-control mr-4" [(ngModel)]="UserDetails.firstname" name="firstname">
+            <input type= "text" placeholder="LastName" class="form-control" [(ngModel)]="UserDetails.lastname" name="lastname"></div>
+            <input type= "text" placeholder="MobileNumber" class="form-control mb-2 pr-2" [(ngModel)]="UserDetails.mobilenumber" name="mobilenumber">
+            <input type= "text" placeholder="Address" class="form-control mb-2 pr-2" [(ngModel)]="UserDetails.address" name="address">
+            <!--<input type= "text" placeholder="Village" class="form-group">-->
+            <input type= "text" placeholder="PinCode" class="form-control mb-2 pr-2" [(ngModel)]="UserDetails.pincode" name="pincode">
+            <div class="d-inline-flex mb-2">
+            <input type= "text" placeholder="State"  class="form-control mr-4" [(ngModel)]="UserDetails.state"  name="state" disabled>
+            <input type= "text" placeholder="Country"   class="form-control" [(ngModel)]="UserDetails.country" name="country" disabled></div>
+            <div class="d-inline-flex justify-content-around">
+              <button type="submit" class="btn btn-secondary ml-2 mr-5" >UPDATE</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+          </form>
+
+
+        
+          
+    </div>
+  </div>
+</div>
+
+
+  
+<div class="btn text-white bg-primary ml-5" data-target=".bd-example-modal"  data-toggle="modal">
+  <strong>Add New Address</strong><br><small>(కొత్త అడ్రస్ ని చేర్చండి)</small></div>
+
+
+  <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal">Add New Address</button>-->
+
+  <div class="modal fade bd-example-modal mt-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content pl-2 pr-2">
+        <strong>Add New Address</strong>
+        <form  id="newaddress" (submit)="onClickEditAddress()">
+          <div class="form-group">
+            <label for="inputName">Full Name<span style="color: red;">*</span></label>
+            <input type="text" class="form-control"  placeholder="మీ పూర్తి పేరు తెలియజేయండి" required [(ngModel)]="UserDetails.firstname" name="firstname">
+          </div>
+          
+          <div class="form-group">
+            <label>Mobile Number<span style="color: red;">*</span></label>
+            <input type="text" class="form-control" placeholder="మొబైల్ నెంబర్" required [(ngModel)]="UserDetails.mobilenumber" name="mobilenumber">
+          </div>
+          <div class="form-group">
+            <label>Alternate Mobile Number</label>
+            <input type="text" class="form-control" placeholder="అదనపు మొబైల్ నెంబర్" [(ngModel)]="UserDetails.alternatemobilenumber" name="alternatemobilenumber">
+          </div>
+        
+          
+      
+            <div class="form-group">
+            <label for="inputHouseNo">HouseNo<span style="color: red;">*</span></label>
+            <input type="text" class="form-control" placeholder="ఇంటి నెంబర్" required [(ngModel)]="UserDetails.houseno" name="houseno">
+            </div>
+        
+          <div class="form-group">
+             <label>RoadName,Area,Colony<span style="color: red;">*</span></label>
+             <input type="text" class="form-control" placeholder="కాలనీ పేరు,రోడ్ నెంబర్ తెలియజేయండి" required [(ngModel)]="UserDetails.roadno" name="roadno">
+          </div>
+      
+          <div class="form-group">
+            <label for="selectVillage"><span>Select Village<span style="color: red;">*</span><br><small>(క్రింద వాటిలో మీ ఊరిని ఎంచుకోండి)</small></span></label>
+            <select class="form-control" id="selectVillage" required [(ngModel)]="UserDetails.village" name="village" >
+              <option [ngValue]="Gambhirpur" >Gambhirpur(గంభీర్ పూర్)</option>
+              <option [ngValue]="Thandriyal">Thandriyal(తండ్రియాల)</option>
+              <option [ngValue]="Bommena">Bommena(బొమ్మెన)</option>
+              <option [ngValue]="Rajalingampet">Rajalingampet(రాజాలింగంపేట)</option>
+              <option [ngValue]="Lingampet">Lingampet(లింగంపేట)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Pincode<span style="color: red;">*</span></label>
+            <input type="text" class="form-control" placeholder="మీ పిన్ కోడ్ తెలియజేయండి" required [(ngModel)]="UserDetails.pincode" name="pincode">
+          </div>
+          <div class="d-inline-flex">
+            <div class="form-group">
+              <label>State</label>
+              <input type="text" class="form-control " readonly [(ngModel)]="UserDetails.state" name="state">
+            </div>
+            <div class="form-group pl-2">
+              <label>Country</label>
+              <input type="text" class="form-control" value="India" readonly [(ngModel)]="UserDetails.country" name="country">
+            </div></div><br>
+            <small style="color:green;"><span style="color: red;font-size: larger;">*</span> మార్క్ ఉన్నవి మొత్తం నింపండి</small><br>
+            <div class="d-inline-flex mb-2">
+            
+            <button class="btn bg-secondary text-white"  type="submit" >Save(సేవ్ చేయండి)</button>
+            <button  class="btn btn-secondary ml-5" data-dismiss="modal">Close</button>
+           </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+

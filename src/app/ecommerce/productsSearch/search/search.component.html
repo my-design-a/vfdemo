@@ -1,0 +1,38 @@
+<p>search works!</p>
+
+<form (click)="onClickSearch()">
+<input  [(ngModel)]="itemName" name="productName" class="form-control">
+<button>search</button>
+</form>
+
+
+<div class="container-fluid">
+    <div class="row" *ngFor="let s of searchedData">
+        <div class="col-xs-4">
+            <img src={{s.productImageUrl}}   width="120" height="120">
+           
+        </div>
+        <div class="col-xs-8">
+            <div class="d-inline-flex ">
+                <p class="productName p-2">{{s.productName}}</p>
+                <p class="productName p-2">{{s.productEName}}</p>
+              </div><br>
+              <div class="d-inline-flex">
+                <span class="productweight prc pl-2 pr-2" (click)="onWeight(s.weights.weight1)" id="{{'prc1' + s.productId}}">{{s.weights.weight1}}</span>
+                <span class="productweight pl-2 pr-2" (click)="onWeight(s.weights.weight2)" id="{{'prc2' + s.productId}}">{{s.weights.weight2}}</span>
+                <span class="productweight pl-2 pr-2" (click)="onWeight(s.weights.weight3)" id="{{'prc3' + s.productId}}">{{s.weights.weight3}}</span></div><br>
+              <div class="d-inline-flex p-2 " >
+                <del id="{{'prc4' + s.productId}}">Rs.<span>{{(s.productOriginalPrice*s.quantity*s.selectedweight).toFixed(0)}}</span></del>
+                 <span id="{{'prc5' + s.productId}}">Rs.<span class="opice">{{(s.productDiscountPrice*s.quantity*s.selectedweight).toFixed(0)}}</span></span>
+              </div><br>
+              <div class="btn" (click)="onSelect(s)" id="{{'crt' + s.productId}}">Add To Cart</div>
+              <div class="btn" id="{{'qnty' + s.productId}}">
+              <a (click)="decrementValue(s)"><i class="fa fa-minus-circle"></i></a>
+              <span>{{s.quantity}}</span>
+              <a (click)="incrementValue(s)"><i class="fa fa-plus-circle"></i></a>
+             </div>
+        </div>
+
+    </div>
+
+</div>

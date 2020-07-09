@@ -1,0 +1,217 @@
+<p>adminview works!</p>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+   
+  <a class="navbar-brand" href="#">
+        
+    <h2>Hii</h2> 
+ </a>
+
+
+  
+ <a routerLink="/app-products-cart-page" routerLinkActive="active"> 
+  <i class="fa fa-shopping-cart fa-2x" attr.data-count="1" width="40"></i> 
+</a>
+  
+
+  <div class="input-group md-form form-sm form-2 pl-0 mt-2">
+    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+    <div class="input-group-append">
+      <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+          aria-hidden="true"></i></span>
+    </div>
+  </div>
+
+  
+ 
+ 
+  
+
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+   
+ 
+</div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-dark scrolling-navbar">
+  <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <a class="navbar-brand" href="#">
+        
+          <img src="" class="d-inline-block align-top" alt="logo"> <span class="navtext"> logo</span>
+      </a>
+      <a>
+        signin
+      </a>
+      
+      
+      <a routerLink="/app-products-cart-page" routerLinkActive="active"> 
+        <i class="fa fa-shopping-cart fa-2x" attr.data-count="1" width="40"></i> 
+      </a>
+        
+      <div class="input-group md-form form-sm form-2 pl-0 mt-2">
+        <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
+              aria-hidden="true"></i></span>
+        </div>
+      </div>
+      
+    
+  </div>
+</nav>
+
+//Here
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;color: lime;">
+  <a class="navbar-brand" href="#" style="color: lime;font-weight: bolder;">VILLAGE-FACTORY</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: lime;font-weight: bolder;">
+          <i class="fa fa-shopping-cart fa-2x" attr.data-count="1" width="40"></i> 
+        </a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Navbar text with an inline element
+      <div class="box">
+        <img src="./assets/cart-removebg-preview.png" alt="Flying Kites" style="width: 50px;height: 50px;">
+        <div class="text" style="color: limegreen;">
+            <p>{{cartnum}}</p>
+        </div>
+    </div>
+    </span>
+  </div>
+</nav>
+
+<div class="d-none d-lg-block">
+
+//Just To Show Data
+<div class="container-fluid"  >
+  <div class="row" >   
+    <div class="col md-2 ml-1 pt-2"  *ngFor="let p of productCategory.productCategory" style="text-align: center;">
+         <div class="card" >
+            <a href="#">    
+               <!-- <img src={{p.productImageUrl}} class="img-fluid">-->
+               <img src={{p.productCategoryImageUrl}} width="200" height="220" >
+               
+            </a>
+            <a href="#" style="text-decoration: none;color: green;">
+                <h5 hidden>{{p.productCategoryName}}</h5>
+                <h5 style="font-weight: bolder;color: black;">{{p.productCategoryTeluguName}}</h5>
+                <h5 style="font-weight: bolder;color: black;">{{p.productCategoryName}}</h5>
+            </a>  
+            <div class="btn" style="background-color: lime;font-weight: bolder;color: black;">
+              ADD TO CART
+            </div>
+            
+           
+          </div>
+
+          
+      </div>
+      
+          
+        
+      
+        
+
+
+        
+      
+     
+  </div>
+</div>
+
+
+</div>
+<!---->
+
+
+
+
+
+
+
+
+
+
+<!--For small screens  -->
+<div class="container-fluid">
+  <div class="d-xs-block d-md-none">
+     <div class="row" *ngFor="let p of productCategory.productCategory">
+       <div class="col-xs-6">
+        <img src={{p.productCategoryImageUrl}}   width="120" height="120">
+       </div>
+       <div class="col-xs-6">
+         <div class="d-inline-flex ">
+            <p class="productName p-2">{{p.productCategoryTeluguName}}</p>
+            <p class="productName p-2">{{p.productCategoryName}}</p>
+          </div><br>
+          <div class="d-inline-flex"><span class="pl-2">250g</span>
+            <span class="pl-2">500g</span>
+            <span class="pl-2">1kg</span></div><br>
+          <div class="d-inline-flex">
+            <del class="productName pl-2">Rs.25</del>
+            <p class="productName pl-2">Rs.20</p>
+          </div><br>
+      <div class="btn">
+        <a class="dec" id="dec" hidden><i class="fa fa-minus-circle"></i></a>
+        <span class="hide" id="val">1</span>
+        <a (click)="incButton(p)" id="inc"><i class="fa fa-plus-circle"></i></a></div>
+       </div>
+
+     </div>
+  </div>
+
+
+
+
+
+
+</div>
+<!--End -->
+
+
+
+

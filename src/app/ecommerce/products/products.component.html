@@ -1,0 +1,147 @@
+<!--
+ <nav class="nav" style="margin: 1em;">
+
+  <div class="container-fluid">
+    <div class="row">
+     <!-- <button><img src="./assets/logodesign.png" style="width: 100px; height: 30px;"></button>-->
+
+      <!--<input type="text" placeholder="Search..." style="width: 80%;" class="form-control"  id="inputtype">
+      <button  class="btn btn-light" ><i class="fa fa-search"></i></button>
+
+
+  
+      <a routerLinkActive="active" routerLink="/app-cart-component">Cart
+    
+        <span class="fa-layers fa-fw" >
+   
+           <i class="fa fa-shopping-cart fa-2x" style="color: black; "></i>
+           <span class="fa-layers-counter" style="background:blue;font-size: 50px;">1</span>
+ 
+         </span>
+  
+      </a>
+    </div>
+
+  </div>
+
+ </nav>-->
+
+
+<div class="mt-2 ml-5">
+   <form (submit)="onClickSearch()" id="#search">
+  <div class="d-inline-flex">
+  <input  [(ngModel)]="itemName" name="productname" class="form-control" width="100%" placeholder="Search...">
+  <button class="btn"><i class="fa fa-search"></i></button>
+   </div>
+  </form>
+</div>
+  
+<!--For Large screens  -->
+<div class="container-fluid" style="background-color: lightsteelblue" >
+  <div class="d-none d-lg-block">
+  <div class="row"  >
+    <div class="col mt-1 mb-1"  *ngFor="let p of products.products;" style="text-align: center;">
+      <div class="card pt-2"  >
+        <a href="#">    
+           <!-- <img src={{p.productImageUrl}} class="img-fluid" >-->
+              <img src={{p.productImageUrl}} width="200" height="200" >
+            </a>         
+        <p></p>
+            <a href="#" style="text-decoration: none;color: black;font-weight: bolder;">
+                <span>{{p.productName}}</span>
+                <p>{{p.productEName}}</p>
+            </a>
+           
+            <del><small>Rs.<span>{{p.productOriginalPrice*p.quantity}}</span>/kg</small></del>
+            <span style="font-weight: bold;">Rs.<span>{{p.productDiscountPrice*p.quantity}}</span>/kg</span>
+            
+            <div class="card" style="width: 10em;align-items: center;background-color: lime;float: none; margin: 0 auto;" >
+          
+              <div class="row">
+                 <div class="btn" (click)="incrementValue(p)" style="padding-right: 0.1em;"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></div>
+                 <div class="btn" ><input type="text" name="quantity"  value="{{p.quantity}}" 
+                   maxlength="2" max="10" size="1" id="{{p.productId}}" style="border-style:none;text-align: center;font-weight: bolder;" /></div>
+                 <div class="btn" (click)="decrementValue(p)" style="padding-left: 0.1em;"><i class="fa fa-minus-circle fa-lg" aria-hidden="true"></i></div>   
+              </div>
+            </div>
+            <div class="btn mb-1 badge-danger ml-4 mr-4 mt-1" (click)="onButtonClickData(p)">
+              Add To Cart <img src="https://image.flaticon.com/icons/png/512/126/126083.png" height="20" width="20"/>
+             </div>
+             
+                     
+               
+            </div>
+              </div>
+            </div>
+          
+     </div>
+
+    </div>
+
+ <!--End For Large screens  -->
+
+ 
+
+<!--For small screens  -->
+<div class="container-fluid anyClass" >
+  
+  <div class="d-xs-block d-md-none">
+     <div class="row row-bordered justify-content-center" *ngFor="let p of products.products"  >
+       <div class="col-xs-6 pt-2" *ngIf="categoryId==null || p.productCategory==categoryId">
+        <img src={{p.productImageUrl}}   width="120" height="120">
+       </div>
+       <div class="col-xs-6" *ngIf="categoryId==null || p.productCategory==categoryId">
+         <div class="d-inline-flex ">
+            <p class="productName p-2">{{p.productName}}</p>
+            <p class="productName p-2">{{p.productEName}}</p>
+          </div><br>
+          <div class="d-inline-flex" >
+            <span class="productweight prc pl-2 pr-2" (click)="onWeight(p.weights.weight1)" id="{{'prc1' + p.productId}}">{{p.weights.weight1}}</span>
+            <span class="productweight pl-2 pr-2" (click)="onWeight(p.weights.weight2)" id="{{'prc2' + p.productId}}">{{p.weights.weight2}}</span>
+            <span class="productweight pl-2 pr-2" (click)="onWeight(p.weights.weight3)" id="{{'prc3' + p.productId}}">{{p.weights.weight3}}</span>
+          
+       
+
+          
+          </div><br>
+          <div class="d-inline-flex p-2 "  >
+            <del id="{{'prc4' + p.productId}}">Rs.<span>{{(p.productOriginalPrice*p.quantity*p.selectedweight).toFixed(0)}}</span></del>
+             <span id="{{'prc5' + p.productId}}">Rs.<span class="opice">{{(p.productDiscountPrice*p.quantity*p.selectedweight).toFixed(0)}}</span></span>
+          </div><br>
+          <div class="addButtons" style="margin-left: 5em;">
+          <div class="btn" (click)="onSelect(p)" id="{{'crt' + p.productId}}">Add To Cart</div>
+          <div class="btn" id="{{'qnty' + p.productId}}">
+          <a (click)="decrementValue(p)"><i class="fa fa-minus-circle"></i></a>
+          <span>{{p.quantity}}</span>
+          <a (click)="incrementValue(p)"><i class="fa fa-plus-circle"></i></a>
+         </div>
+        </div>
+        
+       </div>
+
+     </div>
+  </div>
+ 
+
+
+
+
+
+
+</div>
+
+
+<!--eND fOR SMALL sCREENS   {{(p.productDiscountPrice*p.quantity)}}-->
+
+
+
+
+
+
+
+
+    
+  
+
+
+

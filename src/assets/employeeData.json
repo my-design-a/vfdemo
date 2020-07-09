@@ -1,0 +1,33 @@
+[
+    {
+        "employeeId":1,
+        "employeeName":"Aravind",
+        "department":"CSD",
+        "date":"2018-12-12"
+    },
+    {
+        "employeeId":2,
+        "employeeName":"Naveen",
+        "department":"CSD",
+        "date":"2018-12-12"
+    },
+
+    {
+        "employeeId":3,
+        "employeeName":"Vijay",
+        "department":"CSD",
+        "date":"2018-12-12"
+    },
+    {
+        "employeeId":4,
+        "employeeName":"Phani",
+        "department":"CSD",
+        "date":"2018-12-12"
+    },
+    {
+        "employeeId":5,
+        "employeeName":"Avinash",
+        "department":"CSD",
+        "date":"2018-12-12"
+    }
+]

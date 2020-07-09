@@ -1,0 +1,17 @@
+{
+    "cartProducts":[
+
+        {
+            "id":1,
+            "productName":"mobile"
+
+        },
+        {
+            "id":2,
+            "productName":"Phone"
+
+        }
+
+
+    ]
+}

@@ -1,0 +1,21 @@
+::placeholder {
+   
+    font-size: small;
+    
+  }
+
+
+  #down {
+    padding-bottom: 25%;
+   } 
+
+
+
+   .fa-times-circle{ 
+     position:absolute; 
+     width:40px; height:40px; 
+     border-radius:50%;  
+     
+     right:-20px; 
+     top:-20px;}
+

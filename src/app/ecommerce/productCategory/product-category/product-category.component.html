@@ -1,0 +1,129 @@
+<p>product-category works!</p>
+
+<div class="container-fluid anyClass">
+
+  <div class="d-none d-lg-block">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/logodesign.png" alt="Los Angeles" width="100%" height="300">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/logodesign.png" alt="Chicago" width="100%" height="300">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/logodesign.png" alt="New York" width="100%" height="300">
+      </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="d-none d-lg-block">
+<div class="container-fluid" style="background-color: lightcyan" >
+    <div class="row" >   
+      <div class="col ml-1 pt-3"  *ngFor="let p of productCategory.productCategory" style="text-align: center;">
+           <div class="card">
+              <a href="#">    
+                 <!-- <img src={{p.productImageUrl}} class="img-fluid">-->
+                 <img src={{p.productCategoryImageUrl}} width="250" height="220" >
+                 
+              </a>
+              <a href="#" style="text-decoration: none;">
+                  <h5 hidden>{{p.productCategoryName}}</h5>
+                  <h5 style="font-weight: bolder;">{{p.productCategoryTeluguName}}</h5>
+              </a>  
+              
+          
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="d-xs-block d-md-none">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/logodesign.png" alt="Los Angeles" width="100%" height="150">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/logodesign.png" alt="Chicago" width="100%" height="150">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/logodesign.png" alt="New York" width="100%" height="150">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+
+<div class="container-fluid "  >
+  <div class="row justify-content-center text-center mt-2 " >   
+    <div class="col-xs-6 m-2" *ngFor="let p of productCategory.productCategory">
+      <div class="card">
+            <!--<a  [routerLink]="['/app-products']" [queryParams]="{text:'1',category:'vegetable'}"> -->
+             <a (click)="passProductCategory(p)">
+               <!-- <img src={{p.productCategoryImageUrl}} class="img-fluid">-->
+               <img src={{p.productCategoryImageUrl}} width="120" height="120" > 
+               
+            </a> 
+               <small *ngIf="(p.productCategoryId==11)||(p.productCategoryId==12)">{{p.productCategoryName}}</small>
+               <small style="font-weight: bold;margin-bottom: 1em;">{{p.productCategoryTeluguName}}</small>
+      </div>
+    </div>
+      
+  </div>
+  </div>
+</div>
+  
+</div>
+

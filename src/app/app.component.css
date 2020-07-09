@@ -1,0 +1,62 @@
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+   
+    pointer-events: none;
+    color: #aaa;
+}
+
+
+
+.box{
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+}
+.box .text{
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  top: 3%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  color: red;
+  width: 40%; /* Set the width of the positioned div */
+}
+  
+
+.fa-search{
+  
+  color: black;
+}
+
+.fa-home{
+ 
+  color: black;
+}
+
+.fa-grip-horizontal{
+ 
+  color: black;
+}
+
+
+.fa-user-circle{
+  
+  color: black;
+}
+
+
+.fa-shopping-cart{
+  
+  color: black;
+}

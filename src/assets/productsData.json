@@ -1,0 +1,222 @@
+{"products":[{
+     "productId":123450,
+     "productName":"టమోటాలు",
+     "productEName":"Tomatoes",
+     "productCategory":"1",
+     "weights":
+        {
+          "weight1":"250g",
+          "weight2":"500g",
+          "weight3":"1kg"
+        },
+        "selectedweight":"", 
+     "productOriginalPrice":25,
+     "productDiscountPrice":20,
+     "productImageUrl":"https://pngimg.com/uploads/tomato/tomato_PNG12583.png",
+     "quantity":1
+},
+{
+    "productId":123451,
+    "productName":"వంకాయ",
+    "productEName":"Brinjal",
+    "productCategory":"1",
+    "weights":
+        {
+          "weight1":"250g",
+          "weight2":"500g",
+          "weight3":"1kg"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":40,
+    "productDiscountPrice":30,
+    "productImageUrl":"https://img1.exportersindia.com/product_images/bc-full/2018/9/5866120/brinjal-1536046436-4261724.png",
+    "quantity":1
+},
+{
+    "productId":123452,
+    "productName":"బెండకాయ",
+    "productEName":"LadiesFinger",
+    "productCategory":"1",
+    "weights":
+        {
+          "weight1":"250g",
+          "weight2":"500g",
+          "weight3":"1kg"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":25,
+    "productDiscountPrice":18,
+    "productImageUrl":"https://pngimage.net/wp-content/uploads/2018/06/ladies-finger-png-2.png",
+    "quantity":1
+},
+{
+    "productId":123453,
+    "productName":"ఉల్లిపాయలు",
+    "productEName":"Onions",
+    "productCategory":"1",
+    "weights":
+        {
+          "weight1":"500g",
+          "weight2":"1kg",
+          "weight3":"5kg"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":30,
+    "productDiscountPrice":25,
+    "productImageUrl":"https://www.freeiconspng.com/uploads/onion-png-11.png",
+    "quantity":1
+},
+{
+    "productId":123454,
+    "productName":"పచ్చి మిర్చి",
+    "productEName":"GreenChilli",
+    "productCategory":"1",
+    "weights":
+        {
+          "weight1":"100g",
+          "weight2":"250g",
+          "weight3":"500g"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":40,
+    "productDiscountPrice":38,
+    "productImageUrl":"https://5.imimg.com/data5/LT/WH/MY-19237629/fresh-green-chilli-250x250.png",
+    "quantity":1
+},{
+    "productId":123455,
+    "productName":"పాలు",
+    "productEName":"Milk",
+    "productCategory":"2",
+    "weights":
+        {
+          "weight1":"250ml",
+          "weight2":"500ml",
+          "weight3":"1 lt"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":44,
+    "productDiscountPrice":42,
+    "productImageUrl":"https://d1drls3jr9jscf.cloudfront.net/products/15a17ae55573cc8c55cc586.png",
+    "quantity":1
+},
+{
+    "productId":123456,
+    "productName":"నూనె",
+    "productEName":"Palomolien oil",
+    "productCategory":"3",
+    "weights":
+        {
+          "weight1":"500ml",
+          "weight2":"1 lt",
+          "weight3":"5 lt"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":110,
+    "productDiscountPrice":100,
+    "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjHJHyOAAFBLWKsCiIFH47DCx7fFuy0x834z4ogm27zFPxB5Nt&usqp=CAU",
+    "quantity":1
+},
+{
+    "productId":123457,
+    "productName":"వరి",
+    "productEName":"Rice",
+    "productCategory":"4",
+    "weights":
+        {
+          "weight1":"1 kg",
+          "weight2":"10 kg",
+          "weight3":"25 kg"
+        },
+        "selectedweight":"", 
+    "productOriginalPrice":130,
+    "productDiscountPrice":110,
+    "productImageUrl":"https://sc01.alicdn.com/kf/UT8DplkX.pXXXcUQpbXg/Best-Price-Dried-5-Broken-Long-Grain.png",
+    "quantity":1
+},
+{
+    "productId":123458,
+    "productName":"నూనె",
+    "productEName":"Vegetable oil", 
+    "productCategory":"3",
+    "weights":
+        {
+          "weight1":"500ml",
+          "weight2":"1 lt",
+          "weight3":"5 lt"
+        },
+    "selectedweight":"",    
+    "productOriginalPrice":140,
+    "productDiscountPrice":120,
+    "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjHJHyOAAFBLWKsCiIFH47DCx7fFuy0x834z4ogm27zFPxB5Nt&usqp=CAU",
+    "quantity":1
+},
+{
+    "productId":123459,
+    "productName":"నూనె",
+    "productEName":"Groundnut oil",
+    "productCategory":"3",
+    "weights":
+        {
+          "weight1":"500ml",
+          "weight2":"1 lt",
+          "weight3":"5 lt"
+        },
+    "selectedweight":"",    
+    "productOriginalPrice":110,
+    "productDiscountPrice":108,
+    "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjHJHyOAAFBLWKsCiIFH47DCx7fFuy0x834z4ogm27zFPxB5Nt&usqp=CAU",
+    "quantity":1
+},
+{
+    "productId":123460,
+    "productName":"నూనె",
+    "productEName":"Olive oil",
+    "productCategory":"3",
+    "weights":
+        {
+          "weight1":"500ml",
+          "weight2":"1 lt",
+          "weight3":"5 lt"
+        },
+    "selectedweight":"",    
+    "productOriginalPrice":90,
+    "productDiscountPrice":85,
+    "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjHJHyOAAFBLWKsCiIFH47DCx7fFuy0x834z4ogm27zFPxB5Nt&usqp=CAU",
+    "quantity":1
+},
+{
+    "productId":123461,
+    "productName":"నూనె",
+    "productEName":"Coconut oil",
+    "productCategory":"3",
+    "weights":
+        {
+          "weight1":"500ml",
+          "weight2":"1 lt",
+          "weight3":"5 lt"
+        },
+    "selectedweight":"",
+    "productOriginalPrice":100,
+    "productDiscountPrice":96,
+    "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjHJHyOAAFBLWKsCiIFH47DCx7fFuy0x834z4ogm27zFPxB5Nt&usqp=CAU",
+    "quantity":1
+},
+{
+    "productId":123462,
+    "productName":"నూనె",
+    "productEName":"SunFlower oil",
+    "productCategory":"3",
+    "weights":
+        {
+          "weight1":"500ml",
+          "weight2":"1 lt",
+          "weight3":"5 lt"
+        },
+    "selectedweight":"",
+    "productOriginalPrice":102,
+    "productDiscountPrice":92,
+    "productImageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjHJHyOAAFBLWKsCiIFH47DCx7fFuy0x834z4ogm27zFPxB5Nt&usqp=CAU",
+    "quantity":1
+}
+]
+}

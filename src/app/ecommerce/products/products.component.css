@@ -1,0 +1,58 @@
+.card:hover {
+transform: scale(1.0);
+box-shadow: 5px 5px 15px rgba(0, 0,0, 0.6);
+
+}
+
+
+.productName{
+    font-weight: 500;
+}
+
+.btn{
+    background-color: chartreuse;
+    
+    padding: 2px;
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bolder;
+}
+
+
+.row-bordered {
+    position: relative;
+  }
+  
+  .row-bordered:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #4444;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    
+  }
+
+
+  .productweight:hover{
+    background-color: brown;
+    border-radius: 1rem;
+    
+  }
+
+
+  .anyClass {
+    height: calc(100vh - 140px);
+    overflow-y: scroll;
+  }
+
+
+
+
+
+
+  
+
+
+ 

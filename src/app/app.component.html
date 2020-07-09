@@ -1,0 +1,250 @@
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<!--<img src="./assets/logodesign.png" alt="New York"  width="100%" height="50">-->
+<div class="d-none d-lg-block">
+ <nav class="nav" style="margin: 1em;">
+
+  <div class="container-fluid">
+    <div class="row">
+     <!-- <button><img src="./assets/logodesign.png" style="width: 100px; height: 30px;"></button>-->
+
+      <input type="text" placeholder="Search..." style="width: 60%;margin-left: 1em;" >
+      <button type="submit"><i class="fa fa-search" ></i></button>
+
+
+      <div class="box">
+        
+        <img src="./assets/cart-removebg-preview.png" alt="cart" style="width: 40px;height: 40px;">
+        <div class="text" style="color: limegreen;">
+            <p>{{numberOfProducts}}</p>
+        </div>
+      </div>
+
+     
+      <a routerLinkActive="active" routerLink="/app-cart-component" style="margin-right: 5em;">Cart
+    
+        <span class="fa-layers fa-fw" >
+   
+           <i class="fa fa-shopping-cart fa-2x" style="color: black; "></i>
+           <span class="fa-layers-counter" style="background:blue;font-size: 50px;">{{numberOfProducts}}</span>
+ 
+         </span>
+  
+      </a>
+    </div>
+
+  </div>
+
+ </nav>
+
+
+    
+    
+      
+    
+     <!--
+
+      <nav class="navbar navbar-expand-sm bg-dark">
+     
+    
+
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLinkActive="active"  routerLink="/app-products">Product Data List</a> ||
+      </li>
+
+    
+
+      <li class="nav-item">
+        <a routerLinkActive="active"  routerLink="/app-adminview">Admin</a> ||
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/app-product-category">ProductCategory</a>||
+
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/app-login">Login</a>||
+
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/app-signup">Signup</a>||
+
+      </li>
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/app-useraddress">Address</a>||
+
+      </li>
+
+
+      <li class="nav-item">
+        <a routerLinkActive="active" routerLink="/app-cart-component">Cart
+    
+          <span class="fa-layers fa-fw" >
+     
+             <i class="fa fa-shopping-cart fa-2x" style="color: black; "></i>
+             <span class="fa-layers-counter" style="background:blue;font-size: 50px;">{{numberOfProducts}}</span>
+   
+           </span>
+    
+        </a>
+      </li>
+     
+      
+    </ul>
+
+  
+    
+  </nav>-->
+
+  <!--New Navigation Bar-->
+  
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/app-product-category">ProductCategory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/app-products">Product Data List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active"  routerLink="/app-adminview">Adminwork</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/app-useraddress">Address</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/app-signup">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/app-login" >Login</a>
+        </li>
+        
+      </ul>
+
+      <div class="box">
+        
+        <img src="./assets/cart-removebg-preview.png" alt="cart" style="width: 50px;height: 50px;">
+        <div class="text" style="color: limegreen;">
+            <p>{{numberOfProducts}}</p>
+        </div>
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+</div>
+
+  <!--Navbar Ends-->
+ 
+ <div class="d-xs-block d-md-none">
+
+  <nav class="navbar navbar-dark bg-light fixed-bottom ">
+    <ul class="list-inline text-center mb-0">
+
+   <li class="list-inline-item pl-2"> <a class="active" href="#"><i class="fa fa-home"></i><br><span>Home</span></a> </li>
+   <li class="list-inline-item pl-2"> <a routerLinkActive="active" routerLink="/app-product-category"><i class="fa fa-grip-horizontal"></i><br><span>Category</span></a> </li>
+   <li class="list-inline-item pl-2"> <a><i class="fa fa-search"></i><br><span>search</span></a> </li>
+   <li class="list-inline-item pl-2"> <a routerLinkActive="active"  routerLink="/app-products"><i class="fa fa-user-circle"></i><br><span>products</span></a></li>
+   <li class="list-inline-item pl-2"> <a href="/app-cart-component"><i class="fa fa-shopping-cart"></i><br><span>Cart</span></a> </li>
+
+  </ul>
+  </nav>
+</div>
+
+
+ 
+
+     
+       
+        <router-outlet></router-outlet>
+       
+    
+
+     
+     
+
+      
+
+   
+     
+
+      <!--
+      <div id="demo" class="carousel slide" data-ride="carousel"> -->
+
+        <!-- Indicators
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>-->
+        
+        <!-- The slideshow 
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/logodesign.png" alt="firstslide" width="100%" height="300">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/logodesign.png" alt="secondslide" width="100%" height="300">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/logodesign.png" alt="thirdslide" width="100%" height="300">
+          </div>
+        </div>-->
+        
+        <!-- Left and right controls 
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>-->
+
+      <!--<div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>Column 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+            
+              <div class="col-sm-4">
+              <h3>Column 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            
+            </div>
+            
+              <div class="col-sm-4">
+              <h3>Column 3</h3>        
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            </div>
+          </div>
+        </div>-->  
+        
+
+
+
+  
+  
+  
+
+
+
+
+
+

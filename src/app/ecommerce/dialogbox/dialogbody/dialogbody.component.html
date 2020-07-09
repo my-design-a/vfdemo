@@ -1,0 +1,60 @@
+<div class="container-fluid">
+
+
+  <!--Card To Show User Details-->
+
+  <div class="row " *ngFor="let p of userAddress">
+      <div class="col-6" >
+        
+        <img src="../assets/logodesign.png" class="img-fluid">
+      </div>
+      <div class="col-6">
+        <strong>Name    :</strong><span> {{p.firstname}}</span><br>
+        <strong>Mobile  :</strong><span> {{p.mobilenumber}}</span><br>
+        <strong>Address :</strong><span> {{p.address}}</span>
+      </div>
+      <!-- <div class="col-4 text-center">
+        <p>Name  : {{p.firstname}}</p>
+      </div> -->
+
+  </div>
+
+
+
+
+
+
+
+    <!--Table to Show Products-->
+    <table border="1" class="table justify-content-center text-center"> 
+        <thead style="background-color: darkgray;">
+        <th>No</th>
+        <th>Item Name</th>
+        <th>Weight</th>
+        <th>Quantity</th>
+        <th>Price(in Rupees)</th>
+        
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of cartData;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{p.productEName}}</td>
+                <td>{{p.selWeight}}</td>
+                <td>{{p.quantity}}</td> 
+                <td>{{(p.productDiscountPrice*p.selectedweight*p.quantity).toFixed(0)}}</td>
+                
+            </tr>
+
+            <tr>
+                <td colspan="4"><b>Total Amount</b></td>
+                <td><b>{{totalCartValue}}</b></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <button (click)="getUserDetails()" class="btn bg-secondary text-white"> PRINT</button>
+    
+</div>

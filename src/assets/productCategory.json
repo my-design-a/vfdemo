@@ -1,0 +1,77 @@
+{"productCategory":[
+    {
+        "productCategoryId" : 1,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/Vegetables.png",
+        "productCategoryName" : "Vegetables",
+        "productCategoryTeluguName" : "కూరగాయలు"
+        
+    },
+    {
+        "productCategoryId" : 2,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/milkeggs.png",
+        "productCategoryName" : "Milk&Eggs",
+        "productCategoryTeluguName" : "పాలు & గుడ్లు"
+    },
+    {
+        "productCategoryId" : 3,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/oils.png",
+        "productCategoryName" : "Oil",
+        "productCategoryTeluguName" : "నూనె"
+    },
+    {
+        "productCategoryId" : 4,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/Rice.png",
+        "productCategoryName" : "Rice",
+        "productCategoryTeluguName" : "బియ్యం"
+    },
+    {
+        "productCategoryId" : 5,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/Fruits.png",
+        "productCategoryName" : "Fruits",
+        "productCategoryTeluguName" : "పండ్లు"
+    },
+    {
+        "productCategoryId" : 6,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/millets.png",
+        "productCategoryName" : "Millets",
+        "productCategoryTeluguName" : "చిరుధాన్యాలు"
+    },
+    {
+        "productCategoryId" : 7,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/cakes.png",
+        "productCategoryName" : "Bakery",
+        "productCategoryTeluguName" : "కేకులు & చాక్లెట్లు"
+    },
+    {
+        "productCategoryId" : 8,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/spices.png",
+        "productCategoryName" : "Spices",
+        "productCategoryTeluguName" : "మసాలాలు"
+    },
+    {
+        "productCategoryId" : 9,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/Pulses.png",
+        "productCategoryName" : "Pulses",
+        "productCategoryTeluguName" : "పప్పులు"
+    },
+    {
+        "productCategoryId" : 10,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/Startch.png",
+        "productCategoryName" : "Flour",
+        "productCategoryTeluguName" : "పిండి"
+    },
+    {
+        "productCategoryId" : 11,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/chicken.png",
+        "productCategoryName" : "Chicken",
+        "productCategoryTeluguName" : "చికెన్"
+    },
+    {
+        "productCategoryId" : 12,
+        "productCategoryImageUrl" : "/assets/productCategoryImages/goat.png",
+        "productCategoryName" : "Goat",
+        "productCategoryTeluguName" : "మటన్"
+    }
+
+   ]
+}
